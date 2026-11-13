@@ -147,5 +147,96 @@
 // console.log(xyz(2))
 
 
+// let fun = a=> a + 6;
+// console.log(fun(2));
 
 
+// let obj = {
+//     name: "minahil",
+//     schol: "SIT",
+//     batch: {
+//         cr1: "wMA",
+//         cr2: "GD"
+//     },
+//     getFun: ()=>{
+//         console.log(this)
+//     }
+// }
+
+// obj.getFun()
+
+
+// let abc = ()=>{
+//     console.log(arguments)
+// }
+// abc(2,4,"hello")
+
+// class School {
+//     constructor(campus){
+//         this.schlName = "SMIT";
+//         this.campus = campus;
+//     }
+// }
+
+// class Student extends School {
+//     constructor(campus,name,email){
+//         super(campus);
+//         this.name = name;
+//         this.email = email;
+
+//     }
+//     getName(){
+//         return this.name
+//     }
+// }
+// let result = new Student("malir","minahil", "duashaikh03@gmail.com");
+// console.log(result)
+
+///High order function
+// let xyz = (cb)=>{
+// return ()=>{
+//     cb()
+// }
+// }
+
+// let abc = ()=>{
+//     console.log("hello cb")
+// }
+// abc(xyz)
+
+
+// let age = 25;
+
+// let type = age === 18 ? "allow" : age === 25 ? "your are too old" : "not allow";
+// console.log(type)
+
+// let getDate = ()=>{
+//     return new Date().toDateString();
+// }
+// let schoolName = ()=>{
+//     return "smit";
+// }
+// let str = "minahil"
+
+// export default str;
+// export{
+//     getDate,
+//     schoolName
+// }
+
+
+
+let getData = (cb)=>{
+    fetch('https://fakestoreapi.com/products')
+.then(res=> res.json())
+.then(res=> cb(res))
+}
+
+getData((data)=>{
+    console.log("data", data)
+})
+ 
+// setTimeout(()=>{
+//     console.log(products);
+// },5000)
+// console.log("hello world")
